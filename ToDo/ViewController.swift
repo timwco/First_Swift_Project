@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     var name: String?
     
+    //task!.resume()
+    
     @IBOutlet weak var nameLabel: UILabel!
 
     override func viewDidLoad() {

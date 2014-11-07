@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class TableViewController: UITableViewController {
     
@@ -23,9 +24,8 @@ class TableViewController: UITableViewController {
         
         // empty out field
         nameField.text = ""
-        
+
         // refresh tableview
-        items.append(newName)
         
         tableView.reloadData()
         
@@ -34,14 +34,17 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        items.append("James")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let url = "https://tiy-atl-fe-server.herokuapp.com/collections/iostest"
+        
+//        var request: NSURLRequest = NSURLRequest(URL: url)d
+//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
     }
     
     override func viewDidAppear(animated: Bool) {
